@@ -14,12 +14,10 @@
          
           $.ajax("info.txt")
               .done(function(data) {
-             alert(data); 
+            $("p").html(data); 
             })
-              .fail(function() {
-              alert("Could not get data");
-            });
-           $("p").append(info.txt);
+             
+           
       </script>
   </body>
 </html>
