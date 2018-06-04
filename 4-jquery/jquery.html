@@ -4,23 +4,7 @@
     
     <title>AJAX</title>
     <script type="text/javascript" src="jquery.min.js"></script>
-     <style>
-         #circle {
-             width: 100px;
-             height: 100px;
-             background-color: green;
-             border-radius: 50%;
-             margin-right: 10px;
-                 
-         }
-         .square {
-             width: 100px;
-             height: 100px;
-             background-color: red;
-             margin: 10px;
-                 
-             
-         }
+    
         
         
       </style>     
@@ -30,19 +14,10 @@
       <div id="circle"></div>
         
       <script type="text/javascript">
-          $("#circle").click(function() {
-              $(this).animate({
-                  width:"400px", 
-                  height:"400px",
-              marginLeft:"100px",
-                  marginTop:"100px",
-                  
-              }, 2000, function() {
-                  
-                  $(this).css("background-color", "red");
-              });
-          });
-         
+          $.get("info.txt", function(data) {
+              alert(data);
+              
+          })
       </script>
   </body>
 </html>
